@@ -1,0 +1,23 @@
+NAME = libft.a # Nombre de la libreria
+CFLAGS = -Wall -Werror -Wextra # Flags que serán utilizadas al compilar
+CC = gcc # El tipo de compilador que se uilizará, tambien puede ser cc
+CLEAN = rm -Rf # Se incluye el comando que queramos a nuestra variable CLEAN
+SRC = ft_isalpha.c # Los archivos que serán manipulados en Makefile
+OBJS := $(SRC:.c=.o) # Convertir los archivos .c a .o
+
+all: $(NAME) #Se le asigna la libreria al comando all para que ejecute todo lo que se encuentra dentro y los comandos
+$(NAME): %.o
+	@ar rcs $(NAME) $(OBJS) 
+# ar rcs crea nuestra libreria y le asigna los archivos .o // si se incluye antes de ar @ no mestra los comandos al ejecutar
+%.o:
+	$(CC) $(CFLAGS) -c $(SRC)
+# Se compila todos los archivos .o con el compilador, flags y archivos que indicamos en nuestras variables CC, CFLAGS y SRC; el -c evita que pidan main al compilar
+clean:
+	$(CLEAN) $(OBJS)
+#Se asigna a clean todo lo que está incluido en CLEAN que es que elimine todo lo que está en OBJS que son los .o
+fclean:
+	$(CLEAN) $(OBJS)
+	$(CLEAN) $(NAME)
+#Incluimos clean que nos va a eliminar todos los .o y luego eliminamos todos los NAME que es libft.a en este caso
+re: fclean all
+.PHONY: all clean fclean re
