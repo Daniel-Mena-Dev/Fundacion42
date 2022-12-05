@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dmena-ro <dmena-ro@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/03 11:52:00 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/11/03 11:52:02 by dmena-ro         ###   ########.fr       */
+/*   Created: 2022/12/03 18:10:18 by dmena-ro          #+#    #+#             */
+/*   Updated: 2022/12/04 18:01:28 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char *str)
+int	ft_isalpha(int c)
 {
-	unsigned int	i;
 	unsigned int	result;
 
-	i = 0;
-	result = 1;
-	while (str[i] != '\0' )
+	result = 0;
+	if (c >= 'A' && c <= 'Z')
 	{
-		if (0 <= str[i] && str[i] < 65)
-		{
-			result = 0;
-			break ;
-		}
-		else if (90 < str[i] && str[i] < 97)
-		{
-			result = 0;
-			break ;
-		}
-		else if (122 < str[i] && str[i] <= 127)
-		{
-			result = 0;
-			break ;
-		}
-		i++;
+		result = 1;
+	}
+	else if (c >= 'a' && c <= 'z')
+	{
+		result = 1;
 	}
 	return (result);
 }
+
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	int	alpha;
+
+	alpha = ft_isalpha('f');
+	printf("%d", alpha);
+}
+*/

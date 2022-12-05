@@ -2,9 +2,9 @@ NAME = libft.a
 CFLAGS = -Wall -Werror -Wextra
 CC = gcc
 CLEAN = rm -Rf
-SRC = ft_isalpha.c
+SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_toupper.c ft_tolower.c *ft_strchr.c
 OBJS := $(SRC:.c=.o)
-
+DEX := $(SRC:.c=)
 all: $(NAME)
 $(NAME): %.o
 	ar rcs $(NAME) $(OBJS)
@@ -17,6 +17,9 @@ clean:
 
 fclean: clean
 	$(CLEAN) $(NAME)
+sclean:
+	$(CLEAN) $(OBJS)
+	$(CLEAN) $(DEX)
 
 re: fclean all
 .PHONY: all clean fclean re
