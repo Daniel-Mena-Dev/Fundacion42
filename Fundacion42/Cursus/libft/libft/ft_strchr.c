@@ -15,7 +15,6 @@
 char	*ft_strchr(char *s, int c)
 {
 	int				i;
-
 	i = 0;
 	while (s[i] != '\0')
 	{
@@ -31,3 +30,18 @@ char	*ft_strchr(char *s, int c)
 	}
 	return (NULL);
 }
+
+/*
+#include <string.h>
+#include <stdio.h>
+
+int main(void)
+{
+    char str[] = "pepote";
+    char c = 'e';
+    char *result;
+
+    result = ft_strchr(str, c);
+    printf("%s \n", result);
+}
+*/
