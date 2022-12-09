@@ -1,45 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 18:31:35 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/09 20:44:24 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2022/12/09 23:01:44 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
+#include <stddef.h>
 
-char	*ft_strrchr(char *s, int c)
+char	*ft_strnstr(const char *dest, const char *sr, size_t n)
 {
-	int	i;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	while (s[i] != '\0')
-		i++;
-	while (i != 0)
+	if (sr[0] == '\0')
+		return ((char *)dest);
+	else if (dest[0] == '\0')
+		return (NULL);
+	while (dest[i] != '\0')
 	{
-		if (s[i] == (unsigned char)c)
-			return ((char *)&s[i]);
-		i--;
+		j = 0;
+		while (dest[i + j] == sr[j] && (i + j) < n)
+		{
+			if (dest[i + j] == '\0' && sr[j] == '\0')
+				return ((char *)&dest[i]);
+			j++;
+		}
+		if (sr[j] == '\0')
+			return ((char *)&dest[i]);
+		i++;
 	}
-	if (s[i] == (unsigned char)c)
-		return ((char *)&s[i]);
-	return (NULL);
+	return (0);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-
-int main(void)
-{
-    char str[] = "teste";
-    char c = 'e';
-    char *result;
-
-    result = ft_strrchr(str, c);
-    printf("%s \n", result);
-}*/

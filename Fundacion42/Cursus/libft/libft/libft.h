@@ -6,7 +6,7 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 18:11:55 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/05 20:04:51 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2022/12/09 23:00:39 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,9 @@ void	*ft_memset(void *s, int i, size_t n);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(char *s, int c);
+size_t	ft_strlcpy(char *st1, char *st2, size_t n);
+char	*ft_strrchr(char *s, int c);
+size_t	ft_strncmp(const char *s1, const char *s2, size_t n);
+size_t	ft_strlcat(char *dest, char *cat, size_t n);
+char	*ft_strnstr(const char *dest, const char *sr, size_t n);
 #endif

@@ -1,34 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/04 18:31:35 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/09 20:44:24 by dmena-ro         ###   ########.fr       */
+/*   Created: 2022/12/05 19:13:35 by dmena-ro          #+#    #+#             */
+/*   Updated: 2022/12/08 19:48:44 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-char	*ft_strrchr(char *s, int c)
+size_t	ft_strlcpy(char *st1, char *st2, size_t n)
 {
-	int	i;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	while (s[i] != '\0')
-		i++;
-	while (i != 0)
+	j = 0;
+	while (st2[j] != '\0')
 	{
-		if (s[i] == (unsigned char)c)
-			return ((char *)&s[i]);
-		i--;
+		j++;
 	}
-	if (s[i] == (unsigned char)c)
-		return ((char *)&s[i]);
-	return (NULL);
+	if (st1[i] == '\0' || !st2)
+		return (0);
+	if (n == 0)
+		return (j);
+	while (st2[i] != '\0' && i < n - 1)
+	{
+		st1[i] = st2[i];
+		i++;
+	}
+	st1[i] = '\0';
+	return (j);
 }
 /*
 #include <string.h>
@@ -36,10 +42,15 @@ char	*ft_strrchr(char *s, int c)
 
 int main(void)
 {
-    char str[] = "teste";
-    char c = 'e';
-    char *result;
+    char str[] = "";
+	char str2[] = "thor";
+	size_t	n = 3;
+	size_t	result;
+	char result2;
 
-    result = ft_strrchr(str, c);
-    printf("%s \n", result);
+    result = ft_strlcpy(str, str2, n);
+    printf("%d \n", result);
+	result2 = ft_strlcpy(str, str2, n);
+	printf("%s \n", str2);
+	
 }*/
