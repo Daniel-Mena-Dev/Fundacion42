@@ -6,12 +6,11 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 18:42:09 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/05 19:10:02 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2022/12/14 19:19:49 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memset(void *s, int i, size_t n)
 {

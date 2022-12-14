@@ -6,12 +6,11 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 18:42:09 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/11 23:33:21 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2022/12/14 19:22:44 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memchr(const void *st, int ch, size_t n)
 {
@@ -24,9 +23,11 @@ void	*ft_memchr(const void *st, int ch, size_t n)
 	{
 		if (stcpy[i] == (char)ch)
 		{
-			return ((void *)(stcpy + i)); // imprimir a partir de ese con void
+			return ((void *)(stcpy + i));
 		}
 		i++;
 	}
 	return (NULL);
 }
+
+/*return ((void *)(stcpy + i));  imprimir a partir de ese con void*/

@@ -6,12 +6,11 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 19:13:35 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/09 23:02:32 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2022/12/14 19:19:41 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 /*
 Esta función devuelve el tamaño de dest + cat. 'n' te limita el tamaño por el 
 va a empezar a copiar cat en dest, es decir, si dest = 'hola' cat = 'kiu' y

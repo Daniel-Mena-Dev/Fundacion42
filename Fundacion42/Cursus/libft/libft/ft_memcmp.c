@@ -6,12 +6,11 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 19:46:42 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/11 23:50:43 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2022/12/14 19:19:57 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 int	ft_memcmp(const char *st1, const char *st2, size_t n)
 {

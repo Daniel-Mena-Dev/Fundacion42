@@ -6,12 +6,11 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 19:13:35 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/11 22:38:59 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2022/12/14 19:20:10 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_bzero(const char *st, size_t n)
 {

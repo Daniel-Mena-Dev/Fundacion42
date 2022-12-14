@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/04 18:42:09 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/14 21:26:36 by dmena-ro         ###   ########.fr       */
+/*   Created: 2022/12/14 20:42:40 by dmena-ro          #+#    #+#             */
+/*   Updated: 2022/12/14 22:14:45 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *mv, size_t n)
+char	*ft_strdup(const char *str)
 {
-	unsigned char	*destcpy;
-	unsigned char	*mvcpy;
-	size_t			i;
+	char	*strblock;
+	char	*strcpy;
+	size_t	i;
 
-	destcpy = (unsigned char *)dest;
-	mvcpy = (unsigned char *) mv;
-	if (!destcpy && !mvcpy)
+	strcpy = (char *)str;
+	strblock = (char *)malloc(ft_strlen(strcpy)+ 1);
+	if (strblock == NULL)
 		return (NULL);
-	if (destcpy > mvcpy)
+	i = 0;
+	while (strcpy[i] != '\0')
 	{
-		while (n-- > 0)
-			destcpy[n] = mvcpy[n];
+		strblock[i] = strcpy[i];
+		i++;
 	}
-	else
-	{
-		i = 0;
-		while (i < n)
-		{
-			destcpy[i] = mvcpy[i];
-			i++;
-		}	
-	}
-	return (destcpy);
+	strblock[i] = '\0';
+	return (strblock);
 }
+
+/*
+char	*strcpy;
+
+strcpy = (char *)str;
+*/

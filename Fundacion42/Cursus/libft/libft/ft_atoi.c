@@ -6,12 +6,11 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 17:55:06 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/11 22:38:50 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2022/12/14 19:20:13 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 size_t	ft_atoi(const char *st)
 {
