@@ -6,7 +6,7 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 18:11:55 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/14 21:45:08 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2022/12/23 19:16:05 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,6 @@ void	*ft_memchr(const void *st, int ch, size_t n);
 int		ft_memcmp(const char *st1, const char *st2, size_t n);
 void	*ft_calloc(size_t nitems, size_t size);
 char	*ft_strdup(const char *str);
+char	*ft_substr(char const *st, unsigned int start, size_t ln);
+char	*ft_strjoin(char const *sf, char const *ss);
 #endif

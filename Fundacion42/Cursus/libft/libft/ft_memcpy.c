@@ -6,10 +6,14 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 19:46:42 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/14 21:26:15 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2023/02/08 17:48:56 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * En ésta función recibimos 2 parámetros que cambiaremos a 'unsigned char'
+ * copia cada carácter de '*cpy' en '*dest' hasta el tamaño de 'n'
+*/
 #include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *cpy, size_t n)

@@ -6,7 +6,7 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 19:13:35 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/14 21:46:09 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2023/02/13 19:49:52 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ size_t	ft_strlcpy(char *st1, const char *st2, size_t n)
 
 int main(void)
 {
-    char str[] = "";
+    char str[] = "la";
 	char str2[] = "thor";
 	size_t	n = 3;
 	size_t	result;
@@ -53,8 +53,9 @@ int main(void)
 	printf("%s \n", str2);
 	
 }
+*/
+/*
 if (st1[i] == '\0' || !st2) Son parecidos, 
  el primero es en la posicion i que sea nulo y el otro que la cadena sea nula.
-
-
 */
+

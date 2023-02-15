@@ -6,10 +6,13 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 19:21:34 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/04 18:12:30 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2023/02/07 14:10:35 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * Devuelve 1 si el valor entrante es un número y si no retorna 0.
+*/
 #include "libft.h"
 
 int	ft_isdigit(int c)

@@ -6,10 +6,16 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 18:42:09 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/14 19:19:49 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2023/02/08 17:39:39 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * Ésta función recibe 1er parámetro 'void *s' que transformaremos a
+ * 'unsigned char'y cambiaremos cada caracter por el que se introduzca en el
+ * 2º parámetro 'int i' y haremos ese cambio según el tamaño del 3er parámetro
+ * 'size_t n'.
+*/
 #include "libft.h"
 
 void	*ft_memset(void *s, int i, size_t n)

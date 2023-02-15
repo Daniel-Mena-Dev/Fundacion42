@@ -6,7 +6,7 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 18:42:09 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/14 19:22:44 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2023/02/08 19:46:25 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,4 @@ void	*ft_memchr(const void *st, int ch, size_t n)
 	return (NULL);
 }
 
-/*return ((void *)(stcpy + i));  imprimir a partir de ese con void*/
+/*return ((void *)(stcpy + i));  la dirección de memoria donde se hace la coincidencia*/

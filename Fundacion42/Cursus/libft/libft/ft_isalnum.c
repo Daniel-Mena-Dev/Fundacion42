@@ -6,10 +6,13 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 17:55:06 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/08 18:29:49 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2023/02/07 14:10:48 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * Devuelve 1 si el valor entrante es una letra o un número y si no retorna 0.
+*/
 #include "libft.h"
 
 int	ft_isalnum(int c)

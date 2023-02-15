@@ -6,10 +6,13 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 20:09:21 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/05 20:09:51 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2023/02/07 14:27:15 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * Transforma los carácteres de letras mayúsculas a minúsculas.
+*/
 #include "libft.h"
 
 int	ft_tolower(int c)
