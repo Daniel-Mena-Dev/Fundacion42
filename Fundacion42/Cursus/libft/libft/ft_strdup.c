@@ -6,10 +6,14 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 20:42:40 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/14 22:14:45 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2023/03/16 18:21:35 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * Reserva memoria y crea una copia de la string 'str'. Devuelve un puntero hacia
+ * la reserva de memoria.
+*/
 #include "libft.h"
 
 char	*ft_strdup(const char *str)
@@ -31,9 +35,16 @@ char	*ft_strdup(const char *str)
 	strblock[i] = '\0';
 	return (strblock);
 }
-
 /*
-char	*strcpy;
+#include <stdio.h>
 
-strcpy = (char *)str;
+int	main(void)
+{
+	char	*st = "Pal bloque de memoria cruck";
+	char	*r = ft_strdup(st);
+
+	printf("\nResultado: %s\n", r);
+
+	return (0);
+}
 */

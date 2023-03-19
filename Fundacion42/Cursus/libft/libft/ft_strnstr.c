@@ -6,10 +6,17 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 18:31:35 by dmena-ro          #+#    #+#             */
-/*   Updated: 2023/02/08 20:03:05 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2023/03/16 19:40:13 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * Busca la primera aparición de una cadena (sr) en otra cadena más
+ * grande (dest) hasta una longitud n especificada. Si se encuentra la cadena
+ * buscada, la función devuelve un puntero a la ubicación en la cadena más 
+ * grande donde se encontró la cadena buscada. Si no se encuentra,
+ * la función devuelve NULL.
+*/
 #include "libft.h"
 
 char	*ft_strnstr(const char *dest, const char *sr, size_t n)
@@ -38,49 +45,16 @@ char	*ft_strnstr(const char *dest, const char *sr, size_t n)
 	return (0);
 }
 /*
+#include <stdio.h>
 
-#include "libft.h"
-
-char	*ft_strnstr(const char *dest, const char *sr, size_t n)
+int	main(void)
 {
-	size_t	i;
-	size_t	j;
+	char	*st1 = "prueba";
+	char	*st2 = "pba";
+	size_t	ln = 6;
+	char		*r;
 
-	// Inicializamos la variable 'i' que se utilizará para recorrer el string 'dest'
-	i = 0;
-	
-	// Caso en el que la cadena a buscar es una cadena vacía
-	if (sr[0] == '\0')
-		return ((char *)dest);
-
-	// Caso en el que la cadena de destino es una cadena vacía
-	else if (dest[0] == '\0')
-		return (NULL);
-	
-	// Bucle que recorre la cadena 'dest'
-	while (dest[i] != '\0')
-	{
-		// Inicializamos la variable 'j' que se utilizará para recorrer la cadena 'sr'
-		j = 0;
-		
-		// Bucle que recorre la cadena 'sr' comparando con los caracteres de la cadena 'dest'
-		while (dest[i + j] == sr[j] && (i + j) < n)
-		{
-			// Caso en el que se han comparado todos los caracteres y son iguales
-			if (dest[i + j] == '\0' && sr[j] == '\0')
-				return ((char *)&dest[i]);
-			j++;
-		}
-		
-		// Caso en el que se han comparado todos los caracteres de 'sr' y son iguales a los de 'dest'
-		if (sr[j] == '\0')
-			return ((char *)&dest[i]);
-		
-		// Incrementamos 'i' para seguir comparando con la siguiente posición de 'dest'
-		i++;
-	}
-	
-	// Devuelve 0 si no se ha encontrado la cadena 'sr' en 'dest'
-	return (0);
+	r = ft_strnstr(st1, st2, ln);
+	printf("%s\n", r);
 }
 */

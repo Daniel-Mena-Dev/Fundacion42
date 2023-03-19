@@ -1,38 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 19:21:34 by dmena-ro          #+#    #+#             */
-/*   Updated: 2023/03/19 18:57:36 by dmena-ro         ###   ########.fr       */
+/*   Created: 2023/02/22 22:17:44 by dmena-ro          #+#    #+#             */
+/*   Updated: 2023/03/14 19:27:46 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
- * Comprueba si el parámetro 'c' es un número ó distinto.
- * Devuelve 1 si el valor entrante es un número y si no retorna 0.
+ * El objectivo es enviar el string 'st' al file descriptor especificado.
 */
 #include "libft.h"
 
-int	ft_isdigit(int c)
+void	ft_putstr_fd(char *st, int fd)
 {
-	int	result;
-
-	result = 0;
-	if (c >= '0' && c <= '9')
-		result = 1;
-	return (result);
+	write(fd, st, ft_strlen(st));
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	int	digit;
-
-	digit = ft_isdigit(52);
-	printf("%d\n", digit);
-}
-*/

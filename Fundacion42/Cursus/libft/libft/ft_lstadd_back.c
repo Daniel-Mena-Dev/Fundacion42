@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 19:21:34 by dmena-ro          #+#    #+#             */
-/*   Updated: 2023/03/19 18:57:36 by dmena-ro         ###   ########.fr       */
+/*   Created: 2023/03/03 17:52:09 by dmena-ro          #+#    #+#             */
+/*   Updated: 2023/03/15 17:24:14 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
- * Comprueba si el parámetro 'c' es un número ó distinto.
- * Devuelve 1 si el valor entrante es un número y si no retorna 0.
+ * Mete al final de la lista 'lst' el nodo 'new'. 
 */
 #include "libft.h"
 
-int	ft_isdigit(int c)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	result;
+	t_list	*last;
 
-	result = 0;
-	if (c >= '0' && c <= '9')
-		result = 1;
-	return (result);
+	last = ft_lstlast(*lst);
+	if (last)
+		last->next = new;
+	else
+		*lst = new;
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	int	digit;
-
-	digit = ft_isdigit(52);
-	printf("%d\n", digit);
-}
-*/

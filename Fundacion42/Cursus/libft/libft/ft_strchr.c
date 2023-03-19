@@ -6,13 +6,18 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 19:46:42 by dmena-ro          #+#    #+#             */
-/*   Updated: 2022/12/08 18:30:24 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2023/03/16 18:16:29 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * La función devuelve una string a partir de la primera aparición del 
+ * carácter 'c' encontrado en el parametro 's' empezando desde el inicio.
+ * Si no lo encuentra devuelve NULL.
+*/
 #include "libft.h"
 
-char	*ft_strchr(char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
@@ -31,9 +36,7 @@ char	*ft_strchr(char *s, int c)
 	}
 	return (NULL);
 }
-
 /*
-#include <string.h>
 #include <stdio.h>
 
 int main(void)

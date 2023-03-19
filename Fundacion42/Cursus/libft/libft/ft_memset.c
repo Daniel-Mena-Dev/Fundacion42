@@ -6,15 +6,14 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 18:42:09 by dmena-ro          #+#    #+#             */
-/*   Updated: 2023/02/08 17:39:39 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2023/03/16 17:54:48 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
- * Ésta función recibe 1er parámetro 'void *s' que transformaremos a
- * 'unsigned char'y cambiaremos cada caracter por el que se introduzca en el
- * 2º parámetro 'int i' y haremos ese cambio según el tamaño del 3er parámetro
- * 'size_t n'.
+ * Se utiliza para reemplazar los primeros 'n' bytes de memoria de la
+ * dirección de memoria 's' por la variable 'i'. La función devuelve 's'
+ * modificada.
 */
 #include "libft.h"
 
@@ -34,23 +33,16 @@ void	*ft_memset(void *s, int i, size_t n)
 }
 /*
 #include <stdio.h>
-#include <unistd.h>
 
 int	main(void)
 {
-	void	*cadena;
-	const void	*copy_str;
-	int		i;
+	unsigned char	cadena[] = "Kakarotto";
+	char			*r;
+	int				i = (char)70;
 
-	cadena = "Kakarotto";
-	ft_memset(cadena, 70, 3);
-	copy_str = (const void *)cadena;
-	i = 0;
-	while (copy_str)
-	{
-		write(1, &copy_str[i], 1);
-		i++;
-	}
+	r = ft_memset(cadena, i, 3);
+	printf("%s\n", r);
+
 	return (0);
 }
 */

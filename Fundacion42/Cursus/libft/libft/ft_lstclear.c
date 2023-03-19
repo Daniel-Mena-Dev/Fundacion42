@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 19:21:34 by dmena-ro          #+#    #+#             */
-/*   Updated: 2023/03/19 18:57:36 by dmena-ro         ###   ########.fr       */
+/*   Created: 2023/03/09 17:32:23 by dmena-ro          #+#    #+#             */
+/*   Updated: 2023/03/15 17:36:48 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
- * Comprueba si el parámetro 'c' es un número ó distinto.
- * Devuelve 1 si el valor entrante es un número y si no retorna 0.
+ * Elimina y libera la memoria de todos los nodos de la lista enlazada a 
+ * partir del primer elemento que se le proporciona '**lst' utilizando la 
+ * función 'del y 'free'. 
 */
+
 #include "libft.h"
 
-int	ft_isdigit(int c)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	int	result;
+	t_list	*aux;
 
-	result = 0;
-	if (c >= '0' && c <= '9')
-		result = 1;
-	return (result);
+	if (*lst)
+	{
+		while (*lst)
+		{
+			aux = (*lst)->next;
+			ft_lstdelone(*lst, del);
+			*lst = aux;
+		}
+	}
+	*lst = NULL;
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	int	digit;
-
-	digit = ft_isdigit(52);
-	printf("%d\n", digit);
-}
-*/

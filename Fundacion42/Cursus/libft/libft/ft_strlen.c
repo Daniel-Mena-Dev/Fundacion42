@@ -6,12 +6,12 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 18:31:35 by dmena-ro          #+#    #+#             */
-/*   Updated: 2023/02/07 14:31:04 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2023/03/16 19:00:49 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
- * Recorre un string hasta el carácter '\0' y devuelve la longitud del mismo. 
+ * Recorre una string hasta el carácter '\0' y devuelve la longitud del mismo. 
 */
 #include "libft.h"
 
@@ -32,6 +32,6 @@ int	main(void)
 	int	pr;
 
 	pr = ft_strlen("125");
-	printf("%d", pr);
+	printf("%d\n", pr);
 }
 */

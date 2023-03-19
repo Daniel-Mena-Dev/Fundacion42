@@ -6,11 +6,15 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 18:42:09 by dmena-ro          #+#    #+#             */
-/*   Updated: 2023/02/13 19:57:10 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2023/03/19 19:05:33 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+/**
+ *  Se utiliza para mover 'n' bytes de memoria desde la dirección de memoria
+ *  'mv' a la dirección de memoria 'dest'. La función devuelve un puntero
+ *  a 'dest'.
+*/
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *mv, size_t n)
@@ -41,10 +45,6 @@ void	*ft_memmove(void *dest, const void *mv, size_t n)
 }
 /*
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include "libft.h"
-
 
 int main(void)
 {

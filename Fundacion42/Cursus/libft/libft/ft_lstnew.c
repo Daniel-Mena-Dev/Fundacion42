@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 19:21:34 by dmena-ro          #+#    #+#             */
-/*   Updated: 2023/03/19 18:57:36 by dmena-ro         ###   ########.fr       */
+/*   Created: 2023/02/23 19:59:33 by dmena-ro          #+#    #+#             */
+/*   Updated: 2023/03/19 19:01:46 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
- * Comprueba si el parámetro 'c' es un número ó distinto.
- * Devuelve 1 si el valor entrante es un número y si no retorna 0.
+ * Crea un nodo nuevo para el que se le reserva memoria. El contenido del
+ * nuevo nodo será igual al parámetro introducido en 'content'
 */
 #include "libft.h"
 
-int	ft_isdigit(int c)
+t_list	*ft_lstnew(void *content)
 {
-	int	result;
+	t_list	*new_node;
 
-	result = 0;
-	if (c >= '0' && c <= '9')
-		result = 1;
-	return (result);
+	new_node = (t_list *)malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	int	digit;
-
-	digit = ft_isdigit(52);
-	printf("%d\n", digit);
-}
-*/

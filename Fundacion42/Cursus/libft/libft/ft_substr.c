@@ -6,10 +6,15 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 20:42:40 by dmena-ro          #+#    #+#             */
-/*   Updated: 2023/02/09 17:54:02 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2023/03/19 18:31:40 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * Reserva memoria y devuelve una nueva 'substring' de la string 'st'. La nueva
+ * string empezará desde el indice 'start' de la anterior string y tendrá como
+ * longitud máxima 'ln'.
+*/
 #include "libft.h"
 
 char	*ft_substr(char const *st, unsigned int start, size_t ln)
@@ -35,3 +40,17 @@ char	*ft_substr(char const *st, unsigned int start, size_t ln)
 	sst[i] = '\0';
 	return (sst);
 }
+/*
+#include <stdio.h>
+
+int	main (void)
+{
+	char	*st = "manantial";
+	unsigned int	start = 3;
+	size_t	len_total= 3;
+	char	*result;
+
+	result = ft_substr(st, start, len_total);
+	printf("%s\n", result);
+}
+*/

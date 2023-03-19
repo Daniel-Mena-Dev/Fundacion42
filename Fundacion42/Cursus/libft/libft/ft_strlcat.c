@@ -6,28 +6,17 @@
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 19:13:35 by dmena-ro          #+#    #+#             */
-/*   Updated: 2023/02/13 19:49:36 by dmena-ro         ###   ########.fr       */
+/*   Updated: 2023/03/16 18:43:26 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * Concatena dos cadenas de caracteres 'dest' y 'cat' con un tamaño máximo de 'n'
+ * caracteres en la cadena de destino dest. La función devuelve el tamaño total
+ * de la cadena resultante.
+*/
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	ln;
-
-	ln = 0;
-	while (s[ln] != '\0')
-		ln++;
-	return (ln);
-}
-/*
-Esta función devuelve el tamaño de dest + cat. 'n' te limita el tamaño por el que
-va a empezar a copiar cat en dest, es decir, si dest = 'hola' cat = 'kiu' y
-n = '2' lo copiado sería hokiu y el return -> 5. 
-Con dest = 'hola' cat = 'kiu' y n = '10' sería "holakiu\\nacin//\\nacin//'\0'"
-y el return -> '11'.
-*/
 size_t	ft_strlcat(char *dest, char *cat, size_t n)
 {
 	size_t	ldes;
@@ -55,14 +44,11 @@ size_t	ft_strlcat(char *dest, char *cat, size_t n)
 }
 /*
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include "libft.h"
 
 int		main(void)
 {
 	char	dest[20] = "Hola";
-	char	cat[20] = "j mundo";
+	char	cat[20] = ", mundo";
 	size_t	n = 20;
 	size_t	result;
 

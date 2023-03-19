@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmena-ro <dmena-ro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 19:21:34 by dmena-ro          #+#    #+#             */
-/*   Updated: 2023/03/19 18:57:36 by dmena-ro         ###   ########.fr       */
+/*   Created: 2023/02/24 19:04:13 by dmena-ro          #+#    #+#             */
+/*   Updated: 2023/03/15 18:15:52 by dmena-ro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
- * Comprueba si el parámetro 'c' es un número ó distinto.
- * Devuelve 1 si el valor entrante es un número y si no retorna 0.
+ * Te dice la cantidad de nodos de la lista 'lst'. 
 */
+
 #include "libft.h"
 
-int	ft_isdigit(int c)
+int	ft_lstsize(t_list *lst)
 {
-	int	result;
+	size_t	i;
 
-	result = 0;
-	if (c >= '0' && c <= '9')
-		result = 1;
-	return (result);
+	i = 0;
+	while (lst)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	int	digit;
-
-	digit = ft_isdigit(52);
-	printf("%d\n", digit);
-}
-*/
